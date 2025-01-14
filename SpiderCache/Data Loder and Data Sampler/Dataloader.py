@@ -106,8 +106,8 @@ class MinDeque:
             return self.min_deque[0]  # 返回 (权重, 索引)
         return None
 	
-#class ShadeDataset(torch.utils.data.Dataset):
-class ShadeDataset(Dataset):
+#class dataDataset(torch.utils.data.Dataset):
+class dataDataset(Dataset):
 
 	def __init__(self, imagefolders, transform=None, target_transform=None, cache_data = False,
 		PQ=None,PQ_unimp={},frequency={}, ghost_cache=None, key_counter= None, key_counter_unimp= None,unimp_ratio = 0.05,unimp_dict={},
@@ -874,7 +874,7 @@ class ShadeDataset(Dataset):
 
 
 
-class ShadeValDataset(Dataset):
+class dataValDataset(Dataset):
 
 	def __init__(self, imagefolders, transform=None, target_transform=None, cache_data = False):
 		_datasets = []

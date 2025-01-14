@@ -34,8 +34,8 @@ import threading
 import PIL
 from rediscluster import RedisCluster
 # from collections import OrderedDict
-from torch.utils.data.shadedataset import ShadeDataset, ShadeValDataset
-## The ShadeDataset models a dataset distributed between more than one directories
+from torch.utils.data.datadataset import dataDataset, dataValDataset
+## The dataDataset models a dataset distributed between more than one directories
 ## Each directory should follow ImageFolder structure, meaning that for each class,
 ## We should have a subfolder inside the root, under which all the images belonging to
 ## that specific class will be placed.
@@ -605,7 +605,7 @@ def train(gpu, args):
 	train_imagefolder_list = []
 	train_imagefolder_list.append(train_imagefolder)
 
-	train_dataset = ShadeDataset(
+	train_dataset = dataDataset(
 		train_imagefolder_list,
 		transform_train,
 		cache_data = args.cache_training_data,
@@ -618,7 +618,7 @@ def train(gpu, args):
 		val_imagefolder_list = []
 		val_imagefolder_list.append(val_imagefolder)
 
-		val_dataset = ShadeValDataset(
+		val_dataset = dataValDataset(
 			val_imagefolder_list,
 			transform_test
 			)
@@ -629,7 +629,7 @@ def train(gpu, args):
 											pin_memory=True
 											)
 
-	train_sampler = torch.utils.data.shadesampler.ShadeSampler(train_dataset,
+	train_sampler = torch.utils.data.datasampler.dataSampler(train_dataset,
 																	num_replicas=args.world_size,
 																	rank=rank, batch_size=batch_size, seed = 3475785, 
 																	host_ip = args.host_ip, port_num = args.port_num, rep_factor = args.replication_factor)

@@ -21,13 +21,13 @@ import time
 T_co = TypeVar('T_co', covariant=True)
 
 
-class ShadeSampler(Sampler[T_co]):
-	r"""ShadeSampler that uses fine-grained rank-based importance and 
+class dataSampler(Sampler[T_co]):
+	r"""dataSampler that uses fine-grained rank-based importance and 
 	PADS policy to sample data.
 
 	It is especially useful in conjunction with
 	:class:`torch.nn.parallel.DistributedDataParallel`. In such a case, each
-	process can pass a :class:`~torch.utils.data.ShadeSampler` instance as a
+	process can pass a :class:`~torch.utils.data.dataSampler` instance as a
 	:class:`~torch.utils.data.DataLoader` sampler, and load a subset of the
 	original dataset with repetitive samples.
 
@@ -48,7 +48,7 @@ class ShadeSampler(Sampler[T_co]):
 			replicas. If ``False``, the sampler will add extra indices to make
 			the data evenly divisible across the replicas. Default: ``False``.
 		batch_size (int): The number of sample in a batch. Used for ranking samples.
-		replacement (bool): Replacement allows SHADE to have repetitive samples.
+		replacement (bool): Replacement allows data to have repetitive samples.
 		host_ip (str): Redis master node IP address
 		port_num (str): Port at which Redis instances are listening
 		rep_factor (int/float): factor by which the samples in cache are multiplied to train more 
@@ -488,7 +488,7 @@ class ShadeSampler(Sampler[T_co]):
 			#initial_score
 			# score = (0.7 / (sum_same + 1)) + (0.3 * sum_other / (sum_same + sum_other + 1))
 			# score = (1 / np.log(sum_same + 2)) + (np.log(sum_other + 1) / np.log(sum_same + sum_other + 2))
-			# 学习shade的方式将分数缩放至固定的区间，降低PQ的操作开销
+			# 学习data的方式将分数缩放至固定的区间，降低PQ的操作开销
 			# score = np.log(round((500-sum_same)/10)+round(sum_other/10)+10)
 
 			

@@ -3,21 +3,22 @@
 A Semantic-aware Caching Strategy for DNN Training.
 
 
+```plaintext
 spider-cache/
 ├── data_loader/
-│   ├── init.py
+│   ├── __init__.py
 │   ├── dataloader.py        # Data loader implementation
 │   └── datasampler.py       # Data sampler implementation
 ├── models/
-│   ├── init.py
+│   ├── __init__.py
 │   ├── alexnet.py
 │   ├── vgg.py
 │   └── resnet.py
 ├── utils/
-│   ├── init.py
+│   ├── __init__.py
 │   └── redis_wrapper.py      # Redis wrapper class
 ├── tests/
-│   ├── init.py
+│   ├── __init__.py
 │   ├── test_models.py
 │   ├── test_dataloader.py
 │   ├── test_datasampler.py
@@ -29,6 +30,7 @@ spider-cache/
 ├── config.py                 # Configuration file
 ├── requirements.txt          # Project dependencies
 └── README.md                 # Project documentation
+
 
 
 

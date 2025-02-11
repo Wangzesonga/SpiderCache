@@ -1,6 +1,6 @@
 # Spider Cache
 
-A distributed caching system based on importance sampling for accelerating deep learning training.
+A Semantic-aware Caching Strategy for DNN Training.
 
 
 ## Key Features

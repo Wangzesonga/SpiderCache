@@ -30,6 +30,7 @@ spider-cache/
 ├── config.py                 # Configuration file
 ├── requirements.txt          # Project dependencies
 └── README.md                 # Project documentation
+```plaintext
 
 
 

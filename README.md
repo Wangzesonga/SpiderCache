@@ -1,6 +1,6 @@
-# Spider Cache
+# Spider Cache :spider_web:
 
-:spider_web: A Semantic-aware Caching Strategy for DNN Training.
+A Semantic-aware Caching Strategy for DNN Training.
 
 
 ```plaintext

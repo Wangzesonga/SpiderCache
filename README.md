@@ -7,9 +7,8 @@ A Semantic-aware Caching Strategy for DNN Training.
 
 - **Importance-based Sampling**: Dynamic sample importance calculation using HNSW algorithm
 - **Multi-level Cache**:
-  - Important samples cache
-  - Unimportant samples cache
-  - Ghost cache for access frequency tracking
+  - Importance Cache
+  - Homophily Cache
 - **Multiple Model Support**: AlexNet, VGG, ResNet
 - **Distributed Training**: PyTorch DDP integration
 

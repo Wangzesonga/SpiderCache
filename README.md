@@ -5,30 +5,31 @@ A Semantic-aware Caching Strategy for DNN Training.
 
 spider-cache/
 ├── data_loader/
-│ ├── init.py
-│ ├── dataloader.py # Data loader implementation
-│ └── datasampler.py # Data sampler implementation
-├── models/ # Model definitions
-│ ├── init.py
-│ ├── alexnet.py
-│ ├── vgg.py
-│ └── resnet.py
-├── utils/ # Utility functions
-│ ├── init.py
-│ └── redis_wrapper.py # Redis wrapper class
-├── tests/ # Test files
-│ ├── init.py
-│ ├── test_models.py
-│ ├── test_dataloader.py
-│ ├── test_datasampler.py
-│ ├── test_redis_wrapper.py
-│ └── test_integration.py
-├── examples/ # Example usage
-│ └── train_cifar.py # CIFAR training example
-├── main.py # Main program entry
-├── config.py # Configuration file
-├── requirements.txt # Project dependencies
-└── README.md # Project documentation
+│   ├── __init__.py
+│   ├── dataloader.py        # Data loader implementation
+│   └── datasampler.py       # Data sampler implementation
+├── models/
+│   ├── __init__.py
+│   ├── alexnet.py
+│   ├── vgg.py
+│   └── resnet.py
+├── utils/
+│   ├── __init__.py
+│   └── redis_wrapper.py      # Redis wrapper class
+├── tests/
+│   ├── __init__.py
+│   ├── test_models.py
+│   ├── test_dataloader.py
+│   ├── test_datasampler.py
+│   ├── test_redis_wrapper.py
+│   └── test_integration.py
+├── examples/
+│   └── train_cifar.py        # CIFAR training example
+├── main.py                   # Main program entry
+├── config.py                 # Configuration file
+├── requirements.txt          # Project dependencies
+└── README.md                 # Project documentation
+
 
 
 ## Key Features

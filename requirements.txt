@@ -1,0 +1,29 @@
+# Deep Learning
+torch>=1.7.0
+torchvision>=0.8.0
+
+# Cache & Database
+redis>=5.0.0
+redis-py-cluster>=2.1.0
+
+# Machine Learning
+hnswlib>=0.6.0
+numpy>=1.19.0
+scikit-learn>=0.24.0
+
+# Image Processing
+Pillow>=8.0.0
+
+# Monitoring & Logging
+wandb>=0.12.0
+tensorboard>=2.4.0
+
+# Utilities
+tqdm>=4.50.0
+pandas>=1.2.0
+matplotlib>=3.3.0
+
+# Development
+pytest>=6.0.0
+black>=21.0
+flake8>=3.9.0 
